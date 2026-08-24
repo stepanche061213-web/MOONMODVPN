@@ -1481,6 +1481,193 @@
   "meta": {
     "serverDescription": "MoonMOD" 
     }  
-   }
+   },
+ {
+  "dns": {
+    "servers": [
+      "https:\/\/1.1.1.1\/dns-query",
+      "https:\/\/1.0.0.1\/dns-query"
+    ],
+    "queryStrategy": "UseIPv4"
+  },
+  "routing": {
+    "rules": [
+      {
+        "port": "53",
+        "type": "field",
+        "network": "tcp,udp",
+        "outboundTag": "dns-out"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:doubleclick.net",
+          "domain:googlesyndication.com",
+          "domain:googleadservices.com",
+          "domain:adservice.google.com",
+          "domain:google-analytics.com",
+          "domain:googletagmanager.com",
+          "domain:googletagservices.com",
+          "domain:2mdn.net",
+          "domain:app-measurement.com",
+          "domain:adnxs.com",
+          "domain:criteo.com",
+          "domain:scorecardresearch.com",
+          "domain:moatads.com",
+          "domain:adsrvr.org",
+          "domain:an.yandex.ru",
+          "domain:mc.yandex.ru",
+          "domain:adfox.ru",
+          "domain:adriver.ru",
+          "domain:ad.mail.ru",
+          "domain:alt-ad.mail.ru",
+          "domain:ads.vk.com",
+          "domain:taboola.com",
+          "domain:outbrain.com"
+        ],
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "block"
+      },
+      {
+        "ip": [
+          "91.108.56.0\/22",
+          "91.108.4.0\/22",
+          "91.108.8.0\/22",
+          "91.108.16.0\/22",
+          "91.108.12.0\/22",
+          "149.154.160.0\/20",
+          "91.105.192.0\/23",
+          "91.108.20.0\/22",
+          "185.76.151.0\/24",
+          "2001:b28:f23d::\/48",
+          "2001:b28:f23f::\/48",
+          "2001:67c:4e8::\/48",
+          "2001:b28:f23c::\/48",
+          "2a0a:f280::\/32"
+        ],
+        "type": "field",
+        "outboundTag": "direct"
+      },
+      {
+        "ip": [
+          "10.0.0.0\/8",
+          "172.16.0.0\/12",
+          "192.168.0.0\/16",
+          "127.0.0.0\/8",
+          "::1\/128",
+          "fc00::\/7",
+          "fe80::\/10"
+        ],
+        "type": "field",
+        "outboundTag": "direct"
+      },
+      {
+        "port": 443,
+        "type": "field",
+        "network": "udp",
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "network": "tcp,udp",
+        "outboundTag": "proxy"
+      }
+    ],
+    "domainMatcher": "hybrid",
+    "domainStrategy": "AsIs"
+  },
+  "inbounds": [
+    {
+      "tag": "socks",
+      "port": 10808,
+      "listen": "127.0.0.1",
+      "protocol": "socks",
+      "settings": {
+        "udp": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    },
+    {
+      "tag": "http",
+      "port": 10809,
+      "listen": "127.0.0.1",
+      "protocol": "http",
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls",
+          "quic"
+        ]
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "ru11.foodandgriil.com",
+            "port": 443,
+            "users": [
+              {
+                "id": "2ffc2109-f341-4cd1-80c0-3dc9d0251da2",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "ya.ru",
+          "publicKey": "1B5JrE8wu4DJTn6xt6WxmWQQk5RxDQnltHACsTjOSlQ",
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom"
+    },
+    {
+      "tag": "block",
+      "protocol": "blackhole"
+    },
+    {
+      "tag": "dns-out",
+      "protocol": "dns",
+      "settings": {
+        "blockTypes": [
+          65,
+          28
+        ],
+        "nonIPQuery": "reject"
+      }
+    }
+  ],
+  "remarks": "🇷🇺 Россия",
+  "meta": {
+    "serverDescription": "MoonMOD"
+  }
+ }
 ]
-    

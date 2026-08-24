@@ -1770,10 +1770,12 @@
       "protocol": "blackhole"
     }
   ],
-  "remarks": "🇵🇱 Теллеграмм"
-  } 
- },
-{
+   "remarks": "🇵🇱 Теллеграмм"
+   "meta": {
+   "serverDescription": "MoonMOD" 
+   } 
+  },
+ {
   "dns": {
     "servers": [
       "1.1.1.1",
@@ -1874,6 +1876,8 @@
     }
   ],
   "remarks": "🇳🇱 Теллеграмм"
+   "meta": {
+   "serverDescription": "MoonMOD" 
    }
-  }
+  },
  ]

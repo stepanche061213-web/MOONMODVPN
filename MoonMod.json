@@ -1,0 +1,9 @@
+{
+  "name": "MoonMod VPN",
+  "version": "1.0.0",
+  "description": "MoonMod VPN Configuration",
+  "config": {
+    "enabled": true,
+    "settings": {}
+  }
+}

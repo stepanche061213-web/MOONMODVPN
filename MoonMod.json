@@ -3,5 +3,77 @@
 #announce: base64:TW9vbk1PRCBWUE4gLSBZb3VyIHJlbGlhYmxlIFZQTiEh
 #hide-settings: 1
 
-vless://2ffc2109-f341-4cd1-80c0-3dc9d0251da2@ru8.foodandgriil.com:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=ya.ru&fp=chrome&pbk=O_0GQogb3XlQa4miKAht9LqyLJ6iECwSqKCzg5REFxU&type=tcp&serverDescription=MoonVPN#Германия
-vless://2ffc2109-f341-4cd1-80c0-3dc9d0251da2@ru11.foodandgriil.com:443?encryption=none&flow=xtls-rprx-vision&security=reality&sni=ya.ru&fp=chrome&pbk=1B5JrE8wu4DJTn6xt6WxmWQQk5RxDQnltHACsTjOSlQ&type=tcp&serverDescription=MoonVPN#Россия
+[
+  {
+    "remarks": "🇩🇪 Германия",
+    "meta": { "serverDescription": "MoonVPN" },
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "ru8.foodandgriil.com",
+              "port": 443,
+              "users": [
+                {
+                  "id": "2ffc2109-f341-4cd1-80c0-3dc9d0251da2",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ya.ru",
+            "publicKey": "O_0GQogb3XlQa4miKAht9LqyLJ6iECwSqKCzg5REFxU",
+            "fingerprint": "chrome"
+          }
+        }
+      }
+    ],
+    "traffic": { "total": 100, "used": 0, "expiry": "2026-12-31" },
+    "ping": 150
+  },
+  {
+    "remarks": "🇷🇺 Россия",
+    "meta": { "serverDescription": "MoonVPN" },
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "ru11.foodandgriil.com",
+              "port": 443,
+              "users": [
+                {
+                  "id": "2ffc2109-f341-4cd1-80c0-3dc9d0251da2",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ya.ru",
+            "publicKey": "1B5JrE8wu4DJTn6xt6WxmWQQk5RxDQnltHACsTjOSlQ",
+            "fingerprint": "chrome"
+          }
+        }
+      }
+    ],
+    "traffic": { "total": 100, "used": 0, "expiry": "2026-12-31" },
+    "ping": 142
+  }
+]

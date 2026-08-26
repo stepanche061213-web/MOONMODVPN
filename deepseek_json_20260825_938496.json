@@ -562,7 +562,7 @@
     }
   ],
   "remarks": "Обход глушилок 4"
-  }
+  },
   {
     "dns": {
       "servers": ["https://1.1.1.1/dns-query", "https://1.0.0.1/dns-query"],

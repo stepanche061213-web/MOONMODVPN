@@ -410,8 +410,8 @@
       { "tag": "block", "protocol": "blackhole" }
     ],
     "remarks": "Обход глушилок 3"
-  },
-  {
+  }
+  {,
   "dns": {
     "servers": [
       {
@@ -561,7 +561,7 @@
       "protocol": "blackhole"
     }
   ],
-  "remarks": "Обход глушилок 4"
+  "remarks": "🇺🇸 Обход глушилок 4"
   },
   {
     "dns": {

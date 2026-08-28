@@ -689,8 +689,8 @@
         "🇳🇱 Теллеграмм",
         "✸ Турция ⚡ ✸",
         "🇻🇳📡 LTE Обход | Глушилки",
-        "🇪🇺 Авто | Обход глушилок 1",
-        "🇪🇺 Авто | Обход глушилок 2"
+        "🇪🇺 Обход глушилок 7",
+        "🇪🇺 Обход глушилок 8"
       ],
       "probeUrl": "http://www.gstatic.com/generate_204",
       "probeInterval": "1m",
@@ -786,8 +786,8 @@
             "🇳🇱 Теллеграмм",
             "✸ Турция ⚡ ✸",
             "🇻🇳📡 LTE Обход | Глушилки",
-            "🇪🇺 Авто | Обход глушилок 1",
-            "🇪🇺 Авто | Обход глушилок 2"
+            "🇪🇺 Обход глушилок 7",
+            "🇪🇺 Обход глушилок 8"
           ],
           "fallbackTag": "🇬🇧 месенджеры",
           "strategy": {
@@ -2118,6 +2118,784 @@
     }
   },
   {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-g4u7oa",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "🇻🇳📡 LTE Обход | Глушилки",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "176.109.88.217",
+              "port": 9443,
+              "users": [
+                {
+                  "id": "3b14e541-d0d2-4833-a98e-05d7aa0d14b6",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.cloudflare.com",
+            "fingerprint": "chrome",
+            "shortId": "c303fd64bf463450",
+            "publicKey": "nlSTIZeziCL_gR8HN1UF4F_Gbcrqr4Z9pr_sM6dGbig",
+            "spiderX": "/"
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "🇻🇳📡 LTE Обход | Глушилки",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "🇻🇳📡 LTE Обход | Глушилки",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "🇻🇳📡 LTE Обход | Глушилки"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-yvo6e0",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "🇪🇺 Обход глушилок 7",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "web-interface.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "web-interface.whit3.net",
+            "fingerprint": "edge",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/api/v7/sync/vids/",
+            "mode": "packet-up",
+            "extra": {
+              "path": "/api/v7/sync/vids/",
+              "xPaddingKey": "_dc",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingMethod": "tokenish",
+              "uplinkHTTPMethod": "GET",
+              "xPadding0bfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            }
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "🇪🇺 Обход глушилок 7"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-slwe8j",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "🇪🇺 Обход глушилок 8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "follow-d.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "follow-d.whit3.net",
+            "fingerprint": "edge",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/api/v2/sync/png/",
+            "mode": "packet-up",
+            "extra": {
+              "path": "/api/v2/sync/png/",
+              "xPaddingKey": "_dc",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingMethod": "tokenish",
+              "uplinkHTTPMethod": "GET",
+              "xPadding0bfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            }
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "🇪🇺 Обход глушилок 8"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-8vedae",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "🇺🇸 Нейронки | Gemini",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "153.52.77.156",
+              "port": 709,
+              "users": [
+                {
+                  "id": "b2461860-fe74-4c7a-898c-07db5554394a",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "www.twitch.tv",
+            "fingerprint": "edge",
+            "shortId": "d2a42ea91b0f35ca",
+            "publicKey": "co3WtxeuRrdeMCCeZACrIKe0IB2wDLBxMPKXffeahlE",
+            "spiderX": "/"
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "🇺🇸 Нейронки | Gemini",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "🇺🇸 Нейронки | Gemini",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "🇺🇸 Нейронки | Gemini"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-q7sigr",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "🇷🇴 Нейронки | Gemini",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "109.104.106.15",
+              "port": 443,
+              "users": [
+                {
+                  "id": "b2461860-fe74-4c7a-898c-07db5554394a",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "d3-ro.cloud-cdn.xyz",
+            "fingerprint": "edge",
+            "shortId": "87709fed663228e5",
+            "publicKey": "a_v5l6R-rpVGlENLeONW4sz-GdRwIoDqISOWXGov8nw",
+            "spiderX": "/"
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "🇷🇴 Нейронки | Gemini",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "🇷🇴 Нейронки | Gemini",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "🇷🇴 Нейронки | Gemini"
+  },
+  {
     "dns": {
       "servers": [
         "1.1.1.1",
@@ -2478,306 +3256,6 @@
     },
     "stats": {},
     "remarks": "✸ Турция ⚡ ✸"
-  },
-  {
-    "log": {
-      "loglevel": "error"
-    },
-    "inbounds": [
-      {
-        "tag": "in-8vedae",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "mixed",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "🇺🇸 Нейронки | Gemini",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "153.52.77.156",
-              "port": 709,
-              "users": [
-                {
-                  "id": "b2461860-fe74-4c7a-898c-07db5554394a",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "www.twitch.tv",
-            "fingerprint": "edge",
-            "shortId": "d2a42ea91b0f35ca",
-            "publicKey": "co3WtxeuRrdeMCCeZACrIKe0IB2wDLBxMPKXffeahlE",
-            "spiderX": "/"
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {
-          "ipsBlocked": []
-        }
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {}
-      },
-      {
-        "tag": "dns-out",
-        "protocol": "dns"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "port": "53",
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "10.0.0.2",
-            "198.18.0.2",
-            "fd6e:a81b:704f:1211::2"
-          ],
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "network": "tcp",
-          "port": "853",
-          "outboundTag": "🇺🇸 Нейронки | Gemini",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "domestic_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "wg_bootstrap_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "dns"
-          ],
-          "outboundTag": "🇺🇸 Нейронки | Gemini",
-          "type": "field"
-        }
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "policy": {
-      "levels": {
-        "8": {
-          "connIdle": 300,
-          "downlinkOnly": 4,
-          "handshake": 3,
-          "uplinkOnly": 2,
-          "bufferSize": 3,
-          "statsUserDownlink": false,
-          "statsUserUplink": false,
-          "statsUserOnline": false
-        }
-      },
-      "system": {
-        "statsInboundDownlink": true,
-        "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
-      }
-    },
-    "stats": {},
-    "remarks": "🇺🇸 Нейронки | Gemini"
-  },
-  {
-    "log": {
-      "loglevel": "error"
-    },
-    "inbounds": [
-      {
-        "tag": "in-q7sigr",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "mixed",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "🇷🇴 Нейронки | Gemini",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "109.104.106.15",
-              "port": 443,
-              "users": [
-                {
-                  "id": "b2461860-fe74-4c7a-898c-07db5554394a",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "d3-ro.cloud-cdn.xyz",
-            "fingerprint": "edge",
-            "shortId": "87709fed663228e5",
-            "publicKey": "a_v5l6R-rpVGlENLeONW4sz-GdRwIoDqISOWXGov8nw",
-            "spiderX": "/"
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {
-          "ipsBlocked": []
-        }
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {}
-      },
-      {
-        "tag": "dns-out",
-        "protocol": "dns"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "port": "53",
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "10.0.0.2",
-            "198.18.0.2",
-            "fd6e:a81b:704f:1211::2"
-          ],
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "network": "tcp",
-          "port": "853",
-          "outboundTag": "🇷🇴 Нейронки | Gemini",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "domestic_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "wg_bootstrap_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "dns"
-          ],
-          "outboundTag": "🇷🇴 Нейронки | Gemini",
-          "type": "field"
-        }
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "policy": {
-      "levels": {
-        "8": {
-          "connIdle": 300,
-          "downlinkOnly": 4,
-          "handshake": 3,
-          "uplinkOnly": 2,
-          "bufferSize": 3,
-          "statsUserDownlink": false,
-          "statsUserUplink": false,
-          "statsUserOnline": false
-        }
-      },
-      "system": {
-        "statsInboundDownlink": true,
-        "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
-      }
-    },
-    "stats": {},
-    "remarks": "🇷🇴 Нейронки | Gemini"
   },
   {
     "log": {
@@ -3240,483 +3718,5 @@
     },
     "stats": {},
     "remarks": "🇩🇪 ⚡Германия: Белый список"
-  },
-  {
-    "log": {
-      "loglevel": "error"
-    },
-    "inbounds": [
-      {
-        "tag": "in-g4u7oa",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "mixed",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "🇻🇳📡 LTE Обход | Глушилки",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "176.109.88.217",
-              "port": 9443,
-              "users": [
-                {
-                  "id": "3b14e541-d0d2-4833-a98e-05d7aa0d14b6",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "www.cloudflare.com",
-            "fingerprint": "chrome",
-            "shortId": "c303fd64bf463450",
-            "publicKey": "nlSTIZeziCL_gR8HN1UF4F_Gbcrqr4Z9pr_sM6dGbig",
-            "spiderX": "/"
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {
-          "ipsBlocked": []
-        }
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {}
-      },
-      {
-        "tag": "dns-out",
-        "protocol": "dns"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "port": "53",
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "10.0.0.2",
-            "198.18.0.2",
-            "fd6e:a81b:704f:1211::2"
-          ],
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "network": "tcp",
-          "port": "853",
-          "outboundTag": "🇻🇳📡 LTE Обход | Глушилки",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "domestic_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "wg_bootstrap_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "dns"
-          ],
-          "outboundTag": "🇻🇳📡 LTE Обход | Глушилки",
-          "type": "field"
-        }
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "policy": {
-      "levels": {
-        "8": {
-          "connIdle": 300,
-          "downlinkOnly": 4,
-          "handshake": 3,
-          "uplinkOnly": 2,
-          "bufferSize": 3,
-          "statsUserDownlink": false,
-          "statsUserUplink": false,
-          "statsUserOnline": false
-        }
-      },
-      "system": {
-        "statsInboundDownlink": true,
-        "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
-      }
-    },
-    "stats": {},
-    "remarks": "🇻🇳📡 LTE Обход | Глушилки"
-  },
-  {
-    "log": {
-      "loglevel": "error"
-    },
-    "inbounds": [
-      {
-        "tag": "in-yvo6e0",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "mixed",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "🇪🇺 Авто | Обход глушилок 1",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "web-interface.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": ""
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "serverName": "web-interface.whit3.net",
-            "fingerprint": "edge",
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ]
-          },
-          "xhttpSettings": {
-            "path": "/api/v7/sync/vids/",
-            "mode": "packet-up",
-            "extra": {
-              "path": "/api/v7/sync/vids/",
-              "xPaddingKey": "_dc",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingMethod": "tokenish",
-              "uplinkHTTPMethod": "GET",
-              "xPadding0bfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            }
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {
-          "ipsBlocked": []
-        }
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {}
-      },
-      {
-        "tag": "dns-out",
-        "protocol": "dns"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "port": "53",
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "10.0.0.2",
-            "198.18.0.2",
-            "fd6e:a81b:704f:1211::2"
-          ],
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "network": "tcp",
-          "port": "853",
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "domestic_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "wg_bootstrap_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "dns"
-          ],
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
-          "type": "field"
-        }
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "policy": {
-      "levels": {
-        "8": {
-          "connIdle": 300,
-          "downlinkOnly": 4,
-          "handshake": 3,
-          "uplinkOnly": 2,
-          "bufferSize": 3,
-          "statsUserDownlink": false,
-          "statsUserUplink": false,
-          "statsUserOnline": false
-        }
-      },
-      "system": {
-        "statsInboundDownlink": true,
-        "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
-      }
-    },
-    "stats": {},
-    "remarks": "🇪🇺 Авто | Обход глушилок 1"
-  },
-  {
-    "log": {
-      "loglevel": "error"
-    },
-    "inbounds": [
-      {
-        "tag": "in-slwe8j",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "mixed",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "🇪🇺 Авто | Обход глушилок 2",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "follow-d.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": ""
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "serverName": "follow-d.whit3.net",
-            "fingerprint": "edge",
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ]
-          },
-          "xhttpSettings": {
-            "path": "/api/v2/sync/png/",
-            "mode": "packet-up",
-            "extra": {
-              "path": "/api/v2/sync/png/",
-              "xPaddingKey": "_dc",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingMethod": "tokenish",
-              "uplinkHTTPMethod": "GET",
-              "xPadding0bfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            }
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {
-          "ipsBlocked": []
-        }
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {}
-      },
-      {
-        "tag": "dns-out",
-        "protocol": "dns"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "port": "53",
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "10.0.0.2",
-            "198.18.0.2",
-            "fd6e:a81b:704f:1211::2"
-          ],
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "network": "tcp",
-          "port": "853",
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "domestic_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "wg_bootstrap_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "dns"
-          ],
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
-          "type": "field"
-        }
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "policy": {
-      "levels": {
-        "8": {
-          "connIdle": 300,
-          "downlinkOnly": 4,
-          "handshake": 3,
-          "uplinkOnly": 2,
-          "bufferSize": 3,
-          "statsUserDownlink": false,
-          "statsUserUplink": false,
-          "statsUserOnline": false
-        }
-      },
-      "system": {
-        "statsInboundDownlink": true,
-        "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
-      }
-    },
-    "stats": {},
-    "remarks": "🇪🇺 Авто | Обход глушилок 2"
   }
 ]

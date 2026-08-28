@@ -39,77 +39,6 @@
     ],
     "outbounds": [
       {
-        "tag": "🇨🇳 тикток",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "api.ferrin.uk",
-              "port": 443,
-              "users": [
-                {
-                  "id": "379998c5-2a71-4202-9c74-522e0c3c5404",
-                  "encryption": "none",
-                  "level": 8
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "serverName": "379998c5.ferrin.uk",
-            "fingerprint": "firefox",
-            "alpn": [
-              "h2"
-            ]
-          },
-          "xhttpSettings": {
-            "path": "/nl",
-            "mode": "stream-one",
-            "extra": {
-              "xmux": {
-                "maxConnections": 3,
-                "hMaxReusableSecs": "1140-1260"
-              }
-            }
-          }
-        }
-      },
-      {
-        "tag": "🇺🇸 yotube",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "yt.noooo.win",
-              "port": 8443,
-              "users": [
-                {
-                  "id": "379998c5-2a71-4202-9c74-522e0c3c5404",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "security": "tls",
-          "tlsSettings": {
-            "serverName": "ai-6a917f32.noooo.win",
-            "fingerprint": "edge",
-            "alpn": [
-              "h2"
-            ]
-          }
-        }
-      },
-      {
         "tag": "🇬🇧 месенджеры",
         "protocol": "vless",
         "settings": {
@@ -569,76 +498,16 @@
         "tag": "🇪🇺 Обход глушилок 6"
       },
       {
-        "tag": "🇵🇱 Теллеграмм",
+        "tag": "🇻🇳📡 LTE Обход | Глушилки",
         "protocol": "vless",
         "settings": {
           "vnext": [
             {
-              "address": "quorvia.pulsio.cfd",
-              "port": 443,
+              "address": "176.109.88.217",
+              "port": 9443,
               "users": [
                 {
-                  "id": "d6a3a12d-1497-482e-a445-08aaaef9f0c8",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "tcpSettings": {},
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "quorvia.pulsio.cfd",
-            "publicKey": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
-            "shortId": "9698d67e63bc8ee0",
-            "fingerprint": "firefox"
-          }
-        }
-      },
-      {
-        "tag": "🇳🇱 Теллеграмм",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "quorvia.pulsio.cfd",
-              "port": 443,
-              "users": [
-                {
-                  "id": "d6a3a12d-1497-482e-a445-08aaaef9f0c8",
-                  "encryption": "none",
-                  "flow": "xtls-rprx-vision"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "tcp",
-          "tcpSettings": {},
-          "security": "reality",
-          "realitySettings": {
-            "serverName": "quorvia.pulsio.cfd",
-            "publicKey": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
-            "shortId": "9698d67e63bc8ee0",
-            "fingerprint": "firefox"
-          }
-        }
-      },
-      {
-        "tag": "✸ Турция ⚡ ✸",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "144.31.128.105",
-              "port": 2083,
-              "users": [
-                {
-                  "id": "57b39ea0-3727-4101-9a69-ac2a805304fb",
+                  "id": "3b14e541-d0d2-4833-a98e-05d7aa0d14b6",
                   "encryption": "none",
                   "level": 8,
                   "flow": "xtls-rprx-vision"
@@ -651,13 +520,101 @@
           "network": "tcp",
           "security": "reality",
           "realitySettings": {
-            "show": false,
-            "fingerprint": "firefox",
-            "serverName": "www.booking.com",
-            "shortId": "b4",
-            "spiderX": "/",
-            "password": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
-            "publicKey": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA"
+            "serverName": "www.cloudflare.com",
+            "fingerprint": "chrome",
+            "shortId": "c303fd64bf463450",
+            "publicKey": "nlSTIZeziCL_gR8HN1UF4F_Gbcrqr4Z9pr_sM6dGbig",
+            "spiderX": "/"
+          }
+        }
+      },
+      {
+        "tag": "🇪🇺 Обход глушилок 7",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "web-interface.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "web-interface.whit3.net",
+            "fingerprint": "edge",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/api/v7/sync/vids/",
+            "mode": "packet-up",
+            "extra": {
+              "path": "/api/v7/sync/vids/",
+              "xPaddingKey": "_dc",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingMethod": "tokenish",
+              "uplinkHTTPMethod": "GET",
+              "xPadding0bfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            }
+          }
+        }
+      },
+      {
+        "tag": "🇪🇺 Обход глушилок 8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "follow-d.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "follow-d.whit3.net",
+            "fingerprint": "edge",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/api/v2/sync/png/",
+            "mode": "packet-up",
+            "extra": {
+              "path": "/api/v2/sync/png/",
+              "xPaddingKey": "_dc",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingMethod": "tokenish",
+              "uplinkHTTPMethod": "GET",
+              "xPadding0bfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            }
           }
         }
       },

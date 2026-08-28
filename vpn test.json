@@ -1204,5 +1204,475 @@
     },
     "stats": {},
     "remarks": "yotube"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-7l0jw6",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "144.31.128.105",
+              "port": 2083,
+              "users": [
+                {
+                  "id": "57b39ea0-3727-4101-9a69-ac2a805304fb",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "security": "reality",
+          "realitySettings": {
+            "show": false,
+            "fingerprint": "firefox",
+            "serverName": "www.booking.com",
+            "shortId": "b4",
+            "spiderX": "/",
+            "password": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
+            "publicKey": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA"
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "proxy",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "✸ Турция ⚡ ✸"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-at2hq1",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "api.ferrin.uk",
+              "port": 443,
+              "users": [
+                {
+                  "id": "379998c5-2a71-4202-9c74-522e0c3c5404",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "379998c5.ferrin.uk",
+            "fingerprint": "firefox",
+            "alpn": [
+              "h2"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/nl",
+            "mode": "stream-one",
+            "extra": {
+              "xmux": {
+                "maxConnections": 3,
+                "hMaxReusableSecs": "1140-1260"
+              }
+            }
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "proxy",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "месенджеры"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-at2hq1",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "api.ferrin.uk",
+              "port": 443,
+              "users": [
+                {
+                  "id": "379998c5-2a71-4202-9c74-522e0c3c5404",
+                  "encryption": "none",
+                  "level": 8
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "379998c5.ferrin.uk",
+            "fingerprint": "firefox",
+            "alpn": [
+              "h2"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/nl",
+            "mode": "stream-one",
+            "extra": {
+              "xmux": {
+                "maxConnections": 3,
+                "hMaxReusableSecs": "1140-1260"
+              }
+            }
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "proxy",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "proxy",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "тикток"
   }
 ]

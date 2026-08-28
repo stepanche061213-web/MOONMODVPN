@@ -658,6 +658,51 @@
       }
     },
     {
+      "tag": "🇪🇺 Обход глушилок 10",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "mega-routecdn.whit3.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                "encryption": "none",
+                "level": 8,
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mega-routecdn.whit3.net",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "xhttpSettings": {
+          "path": "/api/v5/sync/stream/",
+          "mode": "packet-up",
+          "extra": {
+            "path": "/api/v5/sync/stream/",
+            "xPaddingKey": "_dc",
+            "xPaddingHeader": "X-Cache",
+            "xPaddingMethod": "tokenish",
+            "uplinkHTTPMethod": "GET",
+            "xPadding0bfsMode": true,
+            "xPaddingPlacement": "queryInHeader"
+          }
+        }
+      }
+    },
+    {
       "protocol": "freedom",
       "tag": "DIRECT"
     },
@@ -685,7 +730,8 @@
       "🇪🇺 Обход глушилок 9",
       "🇳🇱 ⚡Нидерланды: Белый список",
       "🇨🇭 ⚡Швейцария: Белый список",
-      "🇩🇪 ⚡Германия: Белый список"
+      "🇩🇪 ⚡Германия: Белый список",
+      "🇪🇺 Обход глушилок 10"
     ],
     "probeUrl": "http://www.gstatic.com/generate_204",
     "probeInterval": "1m",
@@ -781,7 +827,8 @@
           "🇪🇺 Обход глушилок 9",
           "🇳🇱 ⚡Нидерланды: Белый список",
           "🇨🇭 ⚡Швейцария: Белый список",
-          "🇩🇪 ⚡Германия: Белый список"
+          "🇩🇪 ⚡Германия: Белый список",
+          "🇪🇺 Обход глушилок 10"
         ],
         "fallbackTag": "🇬🇧 месенджеры",
         "strategy": {

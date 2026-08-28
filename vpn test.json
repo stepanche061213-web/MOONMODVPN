@@ -83,71 +83,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "stream.yashafirst.space",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "id": "c03518f5-545b-4f51-8a22-26a4949677eb"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "allowInsecure": false,
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "edge",
-            "serverName": "stream.yashafirst.space"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "noGRPCHeader": true,
-              "noSSEHeader": true,
-              "path": "/media/assets/poll",
-              "scMaxBufferedPosts": 100,
-              "scMaxEachPostBytes": 3000000,
-              "scMinPostsIntervalMs": 5,
-              "seqKey": "p",
-              "seqPlacement": "query",
-              "serverMaxHeaderBytes": 32768,
-              "sessionIDKey": "auth",
-              "sessionIDLength": 22,
-              "sessionIDPlacement": "query",
-              "sessionIDTable": "Base62",
-              "uplinkDataKey": "tk",
-              "uplinkDataPlacement": "body",
-              "uplinkHTTPMethod": "GET",
-              "xPaddingKey": "nonce",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "query",
-              "xmux": {
-                "cMaxReuseTimes": 2,
-                "hKeepAlivePeriod": 0,
-                "hMaxRequestTimes": "600-900",
-                "hMaxReusableSecs": "1800-3000",
-                "maxConcurrency": "16-32"
-              }
-            },
-            "host": "stream.yashafirst.space",
-            "mode": "packet-up",
-            "path": "/media/assets/poll"
-          }
-        },
-        "tag": "🇫🇲 📶 Авто"
-      },
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "188.72.103.3",
               "port": 443,
               "users": [
@@ -498,7 +433,7 @@
         "tag": "🇪🇺 Обход глушилок 6"
       },
       {
-        "tag": "🇻🇳📡 LTE Обход | Глушилки",
+        "tag": "🇪🇺 Обход глушилок 7",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -529,7 +464,7 @@
         }
       },
       {
-        "tag": "🇪🇺 Обход глушилок 7",
+        "tag": "🇪🇺 Обход глушилок 8",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -574,7 +509,7 @@
         }
       },
       {
-        "tag": "🇪🇺 Обход глушилок 8",
+        "tag": "🇪🇺 Обход глушилок 9",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -619,6 +554,111 @@
         }
       },
       {
+        "tag": "🇳🇱 ⚡Нидерланды: Белый список",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "dbs-ru.pool-c.netcenter-cdn.com",
+              "port": 43443,
+              "users": [
+                {
+                  "id": "f320dc20-9209-4764-87ec-f0c4047f5a9c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "x5m.x5.ru",
+            "fingerprint": "firefox",
+            "shortId": "20",
+            "publicKey": "qXyJbGAN_0PyZFVR7vb7anVdCK2Zhxexs7dVgc3vqn0",
+            "spiderX": "/"
+          },
+          "xhttpSettings": {
+            "path": "/",
+            "mode": "auto"
+          }
+        }
+      },
+      {
+        "tag": "🇨🇭 ⚡Швейцария: Белый список",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "dbs-ru.pool-c.netcenter-cdn.com",
+              "port": 43443,
+              "users": [
+                {
+                  "id": "49d01880-cdcb-4154-9ae4-90bbd25df70a",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "5ka-cdn.x5static.net",
+            "fingerprint": "firefox",
+            "shortId": "d7c4a8138a",
+            "publicKey": "sl0wx4BFdJ7SsfQ6SjkSHU_SQ_0mAhyIlT2eAxWGRyQ",
+            "spiderX": "/"
+          },
+          "xhttpSettings": {
+            "path": "/",
+            "mode": "auto"
+          }
+        }
+      },
+      {
+        "tag": "🇩🇪 ⚡Германия: Белый список",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "dbs-ru.pool-c.netcenter-cdn.com",
+              "port": 43443,
+              "users": [
+                {
+                  "id": "00f15063-4711-46b3-8df7-37ad8a5e83af",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "ads.x5media.ru",
+            "fingerprint": "firefox",
+            "shortId": "dbd745",
+            "publicKey": "mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww",
+            "spiderX": "/"
+          },
+          "xhttpSettings": {
+            "path": "/",
+            "mode": "auto"
+          }
+        }
+      },
+      {
         "protocol": "freedom",
         "tag": "DIRECT"
       },
@@ -635,16 +675,18 @@
     "observatory": {
       "subjectSelector": [
         "🇬🇧 месенджеры",
-        "🇫🇲 📶 Авто",
         "🇪🇺 Обход глушилок 1",
         "🇪🇺 Обход глушилок 2",
         "🇪🇺 Обход глушилок 3",
         "🇪🇺 Обход глушилок 4",
         "🇪🇺 Обход глушилок 5",
         "🇪🇺 Обход глушилок 6",
-        "🇻🇳📡 LTE Обход | Глушилки",
         "🇪🇺 Обход глушилок 7",
-        "🇪🇺 Обход глушилок 8"
+        "🇪🇺 Обход глушилок 8",
+        "🇪🇺 Обход глушилок 9",
+        "🇳🇱 ⚡Нидерланды: Белый список",
+        "🇨🇭 ⚡Швейцария: Белый список",
+        "🇩🇪 ⚡Германия: Белый список"
       ],
       "probeUrl": "http://www.gstatic.com/generate_204",
       "probeInterval": "1m",
@@ -729,16 +771,18 @@
           "tag": "🚀 AUTO | Авто-подбор",
           "selector": [
             "🇬🇧 месенджеры",
-            "🇫🇲 📶 Авто",
             "🇪🇺 Обход глушилок 1",
             "🇪🇺 Обход глушилок 2",
             "🇪🇺 Обход глушилок 3",
             "🇪🇺 Обход глушилок 4",
             "🇪🇺 Обход глушилок 5",
             "🇪🇺 Обход глушилок 6",
-            "🇻🇳📡 LTE Обход | Глушилки",
             "🇪🇺 Обход глушилок 7",
-            "🇪🇺 Обход глушилок 8"
+            "🇪🇺 Обход глушилок 8",
+            "🇪🇺 Обход глушилок 9",
+            "🇳🇱 ⚡Нидерланды: Белый список",
+            "🇨🇭 ⚡Швейцария: Белый список",
+            "🇩🇪 ⚡Германия: Белый список"
           ],
           "fallbackTag": "🇬🇧 месенджеры",
           "strategy": {
@@ -1257,132 +1301,6 @@
         "settings": {
           "vnext": [
             {
-              "address": "stream.yashafirst.space",
-              "port": 443,
-              "users": [
-                {
-                  "encryption": "none",
-                  "id": "c03518f5-545b-4f51-8a22-26a4949677eb"
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "allowInsecure": false,
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ],
-            "fingerprint": "edge",
-            "serverName": "stream.yashafirst.space"
-          },
-          "xhttpSettings": {
-            "extra": {
-              "noGRPCHeader": true,
-              "noSSEHeader": true,
-              "path": "/media/assets/poll",
-              "scMaxBufferedPosts": 100,
-              "scMaxEachPostBytes": 3000000,
-              "scMinPostsIntervalMs": 5,
-              "seqKey": "p",
-              "seqPlacement": "query",
-              "serverMaxHeaderBytes": 32768,
-              "sessionIDKey": "auth",
-              "sessionIDLength": 22,
-              "sessionIDPlacement": "query",
-              "sessionIDTable": "Base62",
-              "uplinkDataKey": "tk",
-              "uplinkDataPlacement": "body",
-              "uplinkHTTPMethod": "GET",
-              "xPaddingKey": "nonce",
-              "xPaddingMethod": "tokenish",
-              "xPaddingObfsMode": true,
-              "xPaddingPlacement": "query",
-              "xmux": {
-                "cMaxReuseTimes": 2,
-                "hKeepAlivePeriod": 0,
-                "hMaxRequestTimes": "600-900",
-                "hMaxReusableSecs": "1800-3000",
-                "maxConcurrency": "16-32"
-              }
-            },
-            "host": "stream.yashafirst.space",
-            "mode": "packet-up",
-            "path": "/media/assets/poll"
-          }
-        },
-        "tag": "🇫🇲 📶 Авто"
-      },
-      {
-        "protocol": "freedom",
-        "settings": {
-          "domainStrategy": "UseIP"
-        },
-        "tag": "direct"
-      },
-      {
-        "protocol": "blackhole",
-        "settings": {
-          "response": {
-            "type": "http"
-          }
-        },
-        "tag": "block"
-      }
-    ],
-    "remarks": "🇫🇲 📶 Авто",
-    "routing": {
-      "domainStrategy": "IPIfNonMatch",
-      "rules": [
-        {
-          "inboundTag": [
-            "socks"
-          ],
-          "outboundTag": "🇫🇲 📶 Авто",
-          "port": "0-65535"
-        }
-      ]
-    }
-  },
-  {
-    "dns": {
-      "queryStrategy": "UseIPv4",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "inbounds": [
-      {
-        "listen": "127.0.0.1",
-        "port": 10808,
-        "protocol": "socks",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "enabled": true
-        },
-        "tag": "socks"
-      }
-    ],
-    "meta": null,
-    "outbounds": [
-      {
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
               "address": "188.72.103.3",
               "port": 443,
               "users": [
@@ -1707,334 +1625,6 @@
         }
       ]
     }
-  },
-  {
-    "log": {
-      "loglevel": "error"
-    },
-    "inbounds": [
-      {
-        "tag": "in-yvo6e0",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "mixed",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "🇪🇺 Обход глушилок 7",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "web-interface.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": ""
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "serverName": "web-interface.whit3.net",
-            "fingerprint": "edge",
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ]
-          },
-          "xhttpSettings": {
-            "path": "/api/v7/sync/vids/",
-            "mode": "packet-up",
-            "extra": {
-              "path": "/api/v7/sync/vids/",
-              "xPaddingKey": "_dc",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingMethod": "tokenish",
-              "uplinkHTTPMethod": "GET",
-              "xPadding0bfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            }
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {
-          "ipsBlocked": []
-        }
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {}
-      },
-      {
-        "tag": "dns-out",
-        "protocol": "dns"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "port": "53",
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "10.0.0.2",
-            "198.18.0.2",
-            "fd6e:a81b:704f:1211::2"
-          ],
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "network": "tcp",
-          "port": "853",
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "domestic_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "wg_bootstrap_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "dns"
-          ],
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
-          "type": "field"
-        }
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "policy": {
-      "levels": {
-        "8": {
-          "connIdle": 300,
-          "downlinkOnly": 4,
-          "handshake": 3,
-          "uplinkOnly": 2,
-          "bufferSize": 3,
-          "statsUserDownlink": false,
-          "statsUserUplink": false,
-          "statsUserOnline": false
-        }
-      },
-      "system": {
-        "statsInboundDownlink": true,
-        "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
-      }
-    },
-    "stats": {},
-    "remarks": "🇪🇺 Обход глушилок 7"
-  },
-  {
-    "log": {
-      "loglevel": "error"
-    },
-    "inbounds": [
-      {
-        "tag": "in-slwe8j",
-        "port": 10808,
-        "listen": "127.0.0.1",
-        "protocol": "mixed",
-        "settings": {
-          "auth": "noauth",
-          "udp": true
-        },
-        "sniffing": {
-          "enabled": true,
-          "destOverride": [
-            "http",
-            "tls",
-            "quic"
-          ],
-          "routeOnly": true
-        }
-      }
-    ],
-    "outbounds": [
-      {
-        "tag": "🇪🇺 Обход глушилок 8",
-        "protocol": "vless",
-        "settings": {
-          "vnext": [
-            {
-              "address": "follow-d.whit3.net",
-              "port": 443,
-              "users": [
-                {
-                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
-                  "encryption": "none",
-                  "level": 8,
-                  "flow": ""
-                }
-              ]
-            }
-          ]
-        },
-        "streamSettings": {
-          "network": "xhttp",
-          "security": "tls",
-          "tlsSettings": {
-            "serverName": "follow-d.whit3.net",
-            "fingerprint": "edge",
-            "alpn": [
-              "h2",
-              "http/1.1"
-            ]
-          },
-          "xhttpSettings": {
-            "path": "/api/v2/sync/png/",
-            "mode": "packet-up",
-            "extra": {
-              "path": "/api/v2/sync/png/",
-              "xPaddingKey": "_dc",
-              "xPaddingHeader": "X-Cache",
-              "xPaddingMethod": "tokenish",
-              "uplinkHTTPMethod": "GET",
-              "xPadding0bfsMode": true,
-              "xPaddingPlacement": "queryInHeader"
-            }
-          }
-        }
-      },
-      {
-        "tag": "direct",
-        "protocol": "freedom",
-        "settings": {
-          "ipsBlocked": []
-        }
-      },
-      {
-        "tag": "block",
-        "protocol": "blackhole",
-        "settings": {}
-      },
-      {
-        "tag": "dns-out",
-        "protocol": "dns"
-      }
-    ],
-    "routing": {
-      "domainStrategy": "AsIs",
-      "rules": [
-        {
-          "port": "53",
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "ip": [
-            "10.0.0.2",
-            "198.18.0.2",
-            "fd6e:a81b:704f:1211::2"
-          ],
-          "outboundTag": "dns-out",
-          "type": "field"
-        },
-        {
-          "network": "tcp",
-          "port": "853",
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "domestic_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "wg_bootstrap_dns"
-          ],
-          "outboundTag": "direct",
-          "type": "field"
-        },
-        {
-          "inboundTag": [
-            "dns"
-          ],
-          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
-          "type": "field"
-        }
-      ]
-    },
-    "dns": {
-      "queryStrategy": "UseIP",
-      "servers": [
-        "1.1.1.1",
-        "8.8.8.8"
-      ]
-    },
-    "policy": {
-      "levels": {
-        "8": {
-          "connIdle": 300,
-          "downlinkOnly": 4,
-          "handshake": 3,
-          "uplinkOnly": 2,
-          "bufferSize": 3,
-          "statsUserDownlink": false,
-          "statsUserUplink": false,
-          "statsUserOnline": false
-        }
-      },
-      "system": {
-        "statsInboundDownlink": true,
-        "statsInboundUplink": true,
-        "statsOutboundDownlink": true,
-        "statsOutboundUplink": true
-      }
-    },
-    "stats": {},
-    "remarks": "🇪🇺 Обход глушилок 8"
   },
   {
     "dns": {
@@ -2423,7 +2013,7 @@
     ],
     "outbounds": [
       {
-        "tag": "🇻🇳📡 LTE Обход | Глушилки",
+        "tag": "🇪🇺 Обход глушилок 7",
         "protocol": "vless",
         "settings": {
           "vnext": [
@@ -2544,7 +2134,335 @@
       }
     },
     "stats": {},
-    "remarks": "🇻🇳📡 LTE Обход | Глушилки"
+    "remarks": "🇪🇺 Обход глушилок 7"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-yvo6e0",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "🇪🇺 Обход глушилок 8",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "web-interface.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "web-interface.whit3.net",
+            "fingerprint": "edge",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/api/v7/sync/vids/",
+            "mode": "packet-up",
+            "extra": {
+              "path": "/api/v7/sync/vids/",
+              "xPaddingKey": "_dc",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingMethod": "tokenish",
+              "uplinkHTTPMethod": "GET",
+              "xPadding0bfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            }
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 1",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "🇪🇺 Обход глушилок 8"
+  },
+  {
+    "log": {
+      "loglevel": "error"
+    },
+    "inbounds": [
+      {
+        "tag": "in-slwe8j",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "mixed",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "routeOnly": true
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "🇪🇺 Обход глушилок 9",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "follow-d.whit3.net",
+              "port": 443,
+              "users": [
+                {
+                  "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                  "encryption": "none",
+                  "level": 8,
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "serverName": "follow-d.whit3.net",
+            "fingerprint": "edge",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ]
+          },
+          "xhttpSettings": {
+            "path": "/api/v2/sync/png/",
+            "mode": "packet-up",
+            "extra": {
+              "path": "/api/v2/sync/png/",
+              "xPaddingKey": "_dc",
+              "xPaddingHeader": "X-Cache",
+              "xPaddingMethod": "tokenish",
+              "uplinkHTTPMethod": "GET",
+              "xPadding0bfsMode": true,
+              "xPaddingPlacement": "queryInHeader"
+            }
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {
+          "ipsBlocked": []
+        }
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {}
+      },
+      {
+        "tag": "dns-out",
+        "protocol": "dns"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "port": "53",
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "ip": [
+            "10.0.0.2",
+            "198.18.0.2",
+            "fd6e:a81b:704f:1211::2"
+          ],
+          "outboundTag": "dns-out",
+          "type": "field"
+        },
+        {
+          "network": "tcp",
+          "port": "853",
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "domestic_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "wg_bootstrap_dns"
+          ],
+          "outboundTag": "direct",
+          "type": "field"
+        },
+        {
+          "inboundTag": [
+            "dns"
+          ],
+          "outboundTag": "🇪🇺 Авто | Обход глушилок 2",
+          "type": "field"
+        }
+      ]
+    },
+    "dns": {
+      "queryStrategy": "UseIP",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "policy": {
+      "levels": {
+        "8": {
+          "connIdle": 300,
+          "downlinkOnly": 4,
+          "handshake": 3,
+          "uplinkOnly": 2,
+          "bufferSize": 3,
+          "statsUserDownlink": false,
+          "statsUserUplink": false,
+          "statsUserOnline": false
+        }
+      },
+      "system": {
+        "statsInboundDownlink": true,
+        "statsInboundUplink": true,
+        "statsOutboundDownlink": true,
+        "statsOutboundUplink": true
+      }
+    },
+    "stats": {},
+    "remarks": "🇪🇺 Обход глушилок 9"
   },
   {
     "log": {

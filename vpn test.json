@@ -1,0 +1,1058 @@
+[
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "stream.yashafirst.space",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "c03518f5-545b-4f51-8a22-26a4949677eb"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": false,
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "edge",
+            "serverName": "stream.yashafirst.space"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "noGRPCHeader": true,
+              "noSSEHeader": true,
+              "path": "/media/assets/poll",
+              "scMaxBufferedPosts": 100,
+              "scMaxEachPostBytes": 3000000,
+              "scMinPostsIntervalMs": 5,
+              "seqKey": "p",
+              "seqPlacement": "query",
+              "serverMaxHeaderBytes": 32768,
+              "sessionIDKey": "auth",
+              "sessionIDLength": 22,
+              "sessionIDPlacement": "query",
+              "sessionIDTable": "Base62",
+              "uplinkDataKey": "tk",
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "GET",
+              "xPaddingKey": "nonce",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "query",
+              "xmux": {
+                "cMaxReuseTimes": 2,
+                "hKeepAlivePeriod": 0,
+                "hMaxRequestTimes": "600-900",
+                "hMaxReusableSecs": "1800-3000",
+                "maxConcurrency": "16-32"
+              }
+            },
+            "host": "stream.yashafirst.space",
+            "mode": "packet-up",
+            "path": "/media/assets/poll"
+          }
+        },
+        "tag": "🇫🇲 📶 LTE/4G | Авто"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇫🇲 📶 LTE/4G | Авто",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "socks"
+          ],
+          "outboundTag": "🇫🇲 📶 LTE/4G | Авто",
+          "port": "0-65535"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.72.103.3",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "serverName": "cdnaapiv4.med-st.com"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "scMaxEachPostBytes": 100000,
+              "scMinPostsIntervalMs": 70,
+              "seqKey": "part_index",
+              "seqPlacement": "cookie",
+              "sessionIDKey": "stream_auth",
+              "sessionIDPlacement": "cookie",
+              "sessionKey": "stream_auth",
+              "sessionPlacement": "cookie",
+              "uplinkChunkSize": 0,
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "GET",
+              "xPaddingBytes": "96-1040",
+              "xPaddingHeader": "X-Media-Token",
+              "xPaddingKey": "_t",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": "24-64",
+                "hMaxRequestTimes": "160-320",
+                "hMaxReusableSecs": "600-1200",
+                "maxConcurrency": "4-8",
+                "maxConnections": 0
+              }
+            },
+            "host": "cdnaapiv4.med-st.com",
+            "mode": "packet-up",
+            "path": "/api/v76/uptodown/"
+          }
+        },
+        "tag": "🇪🇺 Обход глушилок 1"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇺 Обход глушилок 1",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "socks"
+          ],
+          "outboundTag": "🇪🇺 Обход глушилок 1",
+          "port": "0-65535"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.72.103.3",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "serverName": "cdnapiv4.streamru3.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "scMaxEachPostBytes": 100000,
+              "scMinPostsIntervalMs": 70,
+              "seqKey": "part_index",
+              "seqPlacement": "cookie",
+              "sessionIDKey": "stream_auth",
+              "sessionIDPlacement": "cookie",
+              "sessionKey": "stream_auth",
+              "sessionPlacement": "cookie",
+              "uplinkChunkSize": 0,
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "GET",
+              "xPaddingBytes": "96-1040",
+              "xPaddingHeader": "X-Media-Token",
+              "xPaddingKey": "_t",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": "24-64",
+                "hMaxRequestTimes": "160-320",
+                "hMaxReusableSecs": "600-1200",
+                "maxConcurrency": "4-8",
+                "maxConnections": 0
+              }
+            },
+            "host": "cdnapiv4.streamru3.net",
+            "mode": "packet-up",
+            "path": "/api/v70/uptodown"
+          }
+        },
+        "tag": "🇪🇺 Обход глушилок 2"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇺 Обход глушилок 2",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "socks"
+          ],
+          "outboundTag": "🇪🇺 Обход глушилок 2",
+          "port": "0-65535"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.72.103.3",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "serverName": "cdnapiv2.md-streem.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "scMaxEachPostBytes": 100000,
+              "scMinPostsIntervalMs": 70,
+              "seqKey": "part_index",
+              "seqPlacement": "cookie",
+              "sessionIDKey": "stream_auth",
+              "sessionIDPlacement": "cookie",
+              "sessionKey": "stream_auth",
+              "sessionPlacement": "cookie",
+              "uplinkChunkSize": 0,
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "GET",
+              "xPaddingBytes": "96-1040",
+              "xPaddingHeader": "X-Media-Token",
+              "xPaddingKey": "_t",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": "24-64",
+                "hMaxRequestTimes": "160-320",
+                "hMaxReusableSecs": "600-1200",
+                "maxConcurrency": "4-8",
+                "maxConnections": 0
+              }
+            },
+            "host": "cdnapiv2.md-streem.net",
+            "mode": "packet-up",
+            "path": "/api/v67/uptodown/"
+          }
+        },
+        "tag": "🇪🇺 Обход глушилок 3"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇺 Обход глушилок 3",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "socks"
+          ],
+          "outboundTag": "🇪🇺 Обход глушилок 3",
+          "port": "0-65535"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.72.103.3",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "serverName": "cdnaapiv3.mediaeze.com"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "scMaxEachPostBytes": 100000,
+              "scMinPostsIntervalMs": 70,
+              "seqKey": "part_index",
+              "seqPlacement": "cookie",
+              "sessionIDKey": "stream_auth",
+              "sessionIDPlacement": "cookie",
+              "sessionKey": "stream_auth",
+              "sessionPlacement": "cookie",
+              "uplinkChunkSize": 0,
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "GET",
+              "xPaddingBytes": "96-1040",
+              "xPaddingHeader": "X-Media-Token",
+              "xPaddingKey": "_t",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": "24-64",
+                "hMaxRequestTimes": "160-320",
+                "hMaxReusableSecs": "600-1200",
+                "maxConcurrency": "4-8",
+                "maxConnections": 0
+              }
+            },
+            "host": "cdnaapiv3.mediaeze.com",
+            "mode": "packet-up",
+            "path": "/api/v68/uptodown/"
+          }
+        },
+        "tag": "🇪🇺 Обход глушилок 4"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇺 Обход глушилок 4",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "socks"
+          ],
+          "outboundTag": "🇪🇺 Обход глушилок 4",
+          "port": "0-65535"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.72.103.3",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "serverName": "cdnapi.streamru8.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "scMaxEachPostBytes": 100000,
+              "scMinPostsIntervalMs": 70,
+              "seqKey": "part_index",
+              "seqPlacement": "cookie",
+              "sessionIDKey": "stream_auth",
+              "sessionIDPlacement": "cookie",
+              "sessionKey": "stream_auth",
+              "sessionPlacement": "cookie",
+              "uplinkChunkSize": 0,
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "GET",
+              "xPaddingBytes": "96-1040",
+              "xPaddingHeader": "X-Media-Token",
+              "xPaddingKey": "_t",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": "24-64",
+                "hMaxRequestTimes": "160-320",
+                "hMaxReusableSecs": "600-1200",
+                "maxConcurrency": "4-8",
+                "maxConnections": 0
+              }
+            },
+            "host": "cdnapi.streamru8.net",
+            "mode": "packet-up",
+            "path": "/api/v74/uptodown"
+          }
+        },
+        "tag": "🇪🇺 Обход глушилок 5"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇺 Обход глушилок 5",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "socks"
+          ],
+          "outboundTag": "🇪🇺 Обход глушилок 5",
+          "port": "0-65535"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "queryStrategy": "UseIPv4",
+      "servers": [
+        "1.1.1.1",
+        "8.8.8.8"
+      ]
+    },
+    "inbounds": [
+      {
+        "listen": "127.0.0.1",
+        "port": 10808,
+        "protocol": "socks",
+        "settings": {
+          "auth": "noauth",
+          "udp": true
+        },
+        "sniffing": {
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ],
+          "enabled": true
+        },
+        "tag": "socks"
+      }
+    ],
+    "meta": null,
+    "outbounds": [
+      {
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "188.72.103.3",
+              "port": 443,
+              "users": [
+                {
+                  "encryption": "none",
+                  "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "xhttp",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": false,
+            "fingerprint": "chrome",
+            "serverName": "cdnapiv3.streamru4.net"
+          },
+          "xhttpSettings": {
+            "extra": {
+              "scMaxEachPostBytes": 100000,
+              "scMinPostsIntervalMs": 70,
+              "seqKey": "part_index",
+              "seqPlacement": "cookie",
+              "sessionIDKey": "stream_auth",
+              "sessionIDPlacement": "cookie",
+              "sessionKey": "stream_auth",
+              "sessionPlacement": "cookie",
+              "uplinkChunkSize": 0,
+              "uplinkDataPlacement": "body",
+              "uplinkHTTPMethod": "GET",
+              "xPaddingBytes": "96-1040",
+              "xPaddingHeader": "X-Media-Token",
+              "xPaddingKey": "_t",
+              "xPaddingMethod": "tokenish",
+              "xPaddingObfsMode": true,
+              "xPaddingPlacement": "queryInHeader",
+              "xmux": {
+                "cMaxLifetimeMs": 0,
+                "cMaxReuseTimes": "24-64",
+                "hMaxRequestTimes": "160-320",
+                "hMaxReusableSecs": "600-1200",
+                "maxConcurrency": "4-8",
+                "maxConnections": 0
+              }
+            },
+            "host": "cdnapiv3.streamru4.net",
+            "mode": "packet-up",
+            "path": "/api/v71/uptodown"
+          }
+        },
+        "tag": "🇪🇺 Обход глушилок 6"
+      },
+      {
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "UseIP"
+        },
+        "tag": "direct"
+      },
+      {
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        },
+        "tag": "block"
+      }
+    ],
+    "remarks": "🇪🇺 Обход глушилок 6",
+    "routing": {
+      "domainStrategy": "IPIfNonMatch",
+      "rules": [
+        {
+          "inboundTag": [
+            "socks"
+          ],
+          "outboundTag": "🇪🇺 Обход глушилок 6",
+          "port": "0-65535"
+        }
+      ]
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ],
+      "queryStrategy": "UseIP"
+    },
+    "routing": {
+      "rules": [
+        {
+          "type": "field",
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "direct"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "settings": {
+          "udp": true,
+          "auth": "noauth"
+        },
+        "sniffing": {
+          "enabled": true,
+          "routeOnly": false,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "enabled": true,
+          "routeOnly": false,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "quorvia.pulsio.cfd",
+              "port": 443,
+              "users": [
+                {
+                  "id": "d6a3a12d-1497-482e-a445-08aaaef9f0c8",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "quorvia.pulsio.cfd",
+            "publicKey": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
+            "shortId": "9698d67e63bc8ee0",
+            "fingerprint": "firefox"
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom"
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole"
+      }
+    ],
+    "remarks": "🇵🇱 Теллеграмм",
+    "meta": {
+      "serverDescription": "MoonMOD"
+    }
+  },
+  {
+    "dns": {
+      "servers": [
+        "1.1.1.1",
+        "1.0.0.1"
+      ],
+      "queryStrategy": "UseIP"
+    },
+    "routing": {
+      "rules": [
+        {
+          "type": "field",
+          "protocol": [
+            "bittorrent"
+          ],
+          "outboundTag": "direct"
+        }
+      ],
+      "domainMatcher": "hybrid",
+      "domainStrategy": "IPIfNonMatch"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "settings": {
+          "udp": true,
+          "auth": "noauth"
+        },
+        "sniffing": {
+          "enabled": true,
+          "routeOnly": false,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "settings": {
+          "allowTransparent": false
+        },
+        "sniffing": {
+          "enabled": true,
+          "routeOnly": false,
+          "destOverride": [
+            "http",
+            "tls",
+            "quic"
+          ]
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "quorvia.pulsio.cfd",
+              "port": 443,
+              "users": [
+                {
+                  "id": "d6a3a12d-1497-482e-a445-08aaaef9f0c8",
+                  "encryption": "none",
+                  "flow": "xtls-rprx-vision"
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "tcp",
+          "tcpSettings": {},
+          "security": "reality",
+          "realitySettings": {
+            "serverName": "quorvia.pulsio.cfd",
+            "publicKey": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
+            "shortId": "9698d67e63bc8ee0",
+            "fingerprint": "firefox"
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom"
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole"
+      }
+    ],
+    "remarks": "🇳🇱 Теллеграмм",
+    "meta": {
+      "serverDescription": "MoonMOD"
+    }
+  }
+]

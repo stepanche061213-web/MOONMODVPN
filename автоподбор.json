@@ -1,0 +1,798 @@
+{
+  "remarks": "🚀 AUTO | Авто-подбор",
+  "log": {
+    "loglevel": "none"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {},
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "http"
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "🇨🇳 тикток",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "api.ferrin.uk",
+            "port": 443,
+            "users": [
+              {
+                "id": "379998c5-2a71-4202-9c74-522e0c3c5404",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "379998c5.ferrin.uk",
+          "fingerprint": "firefox",
+          "alpn": [
+            "h2"
+          ]
+        },
+        "xhttpSettings": {
+          "path": "/nl",
+          "mode": "stream-one",
+          "extra": {
+            "xmux": {
+              "maxConnections": 3,
+              "hMaxReusableSecs": "1140-1260"
+            }
+          }
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 yotube",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "yt.noooo.win",
+            "port": 8443,
+            "users": [
+              {
+                "id": "379998c5-2a71-4202-9c74-522e0c3c5404",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "ai-6a917f32.noooo.win",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 месенджеры",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "api.ferrin.uk",
+            "port": 443,
+            "users": [
+              {
+                "id": "379998c5-2a71-4202-9c74-522e0c3c5404",
+                "encryption": "none",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "379998c5.ferrin.uk",
+          "fingerprint": "firefox",
+          "alpn": [
+            "h2"
+          ]
+        },
+        "xhttpSettings": {
+          "path": "/nl",
+          "mode": "stream-one",
+          "extra": {
+            "xmux": {
+              "maxConnections": 3,
+              "hMaxReusableSecs": "1140-1260"
+            }
+          }
+        }
+      }
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "stream.yashafirst.space",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "c03518f5-545b-4f51-8a22-26a4949677eb"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ],
+          "fingerprint": "edge",
+          "serverName": "stream.yashafirst.space"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "noGRPCHeader": true,
+            "noSSEHeader": true,
+            "path": "/media/assets/poll",
+            "scMaxBufferedPosts": 100,
+            "scMaxEachPostBytes": 3000000,
+            "scMinPostsIntervalMs": 5,
+            "seqKey": "p",
+            "seqPlacement": "query",
+            "serverMaxHeaderBytes": 32768,
+            "sessionIDKey": "auth",
+            "sessionIDLength": 22,
+            "sessionIDPlacement": "query",
+            "sessionIDTable": "Base62",
+            "uplinkDataKey": "tk",
+            "uplinkDataPlacement": "body",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingKey": "nonce",
+            "xPaddingMethod": "tokenish",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "query",
+            "xmux": {
+              "cMaxReuseTimes": 2,
+              "hKeepAlivePeriod": 0,
+              "hMaxRequestTimes": "600-900",
+              "hMaxReusableSecs": "1800-3000",
+              "maxConcurrency": "16-32"
+            }
+          },
+          "host": "stream.yashafirst.space",
+          "mode": "packet-up",
+          "path": "/media/assets/poll"
+        }
+      },
+      "tag": "🇫🇲 📶 Авто"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.72.103.3",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "cdnaapiv4.med-st.com"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "scMaxEachPostBytes": 100000,
+            "scMinPostsIntervalMs": 70,
+            "seqKey": "part_index",
+            "seqPlacement": "cookie",
+            "sessionIDKey": "stream_auth",
+            "sessionIDPlacement": "cookie",
+            "sessionKey": "stream_auth",
+            "sessionPlacement": "cookie",
+            "uplinkChunkSize": 0,
+            "uplinkDataPlacement": "body",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingBytes": "96-1040",
+            "xPaddingHeader": "X-Media-Token",
+            "xPaddingKey": "_t",
+            "xPaddingMethod": "tokenish",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "queryInHeader",
+            "xmux": {
+              "cMaxLifetimeMs": 0,
+              "cMaxReuseTimes": "24-64",
+              "hMaxRequestTimes": "160-320",
+              "hMaxReusableSecs": "600-1200",
+              "maxConcurrency": "4-8",
+              "maxConnections": 0
+            }
+          },
+          "host": "cdnaapiv4.med-st.com",
+          "mode": "packet-up",
+          "path": "/api/v76/uptodown/"
+        }
+      },
+      "tag": "🇪🇺 Обход глушилок 1"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.72.103.3",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "cdnapiv4.streamru3.net"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "scMaxEachPostBytes": 100000,
+            "scMinPostsIntervalMs": 70,
+            "seqKey": "part_index",
+            "seqPlacement": "cookie",
+            "sessionIDKey": "stream_auth",
+            "sessionIDPlacement": "cookie",
+            "sessionKey": "stream_auth",
+            "sessionPlacement": "cookie",
+            "uplinkChunkSize": 0,
+            "uplinkDataPlacement": "body",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingBytes": "96-1040",
+            "xPaddingHeader": "X-Media-Token",
+            "xPaddingKey": "_t",
+            "xPaddingMethod": "tokenish",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "queryInHeader",
+            "xmux": {
+              "cMaxLifetimeMs": 0,
+              "cMaxReuseTimes": "24-64",
+              "hMaxRequestTimes": "160-320",
+              "hMaxReusableSecs": "600-1200",
+              "maxConcurrency": "4-8",
+              "maxConnections": 0
+            }
+          },
+          "host": "cdnapiv4.streamru3.net",
+          "mode": "packet-up",
+          "path": "/api/v70/uptodown"
+        }
+      },
+      "tag": "🇪🇺 Обход глушилок 2"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.72.103.3",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "cdnapiv2.md-streem.net"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "scMaxEachPostBytes": 100000,
+            "scMinPostsIntervalMs": 70,
+            "seqKey": "part_index",
+            "seqPlacement": "cookie",
+            "sessionIDKey": "stream_auth",
+            "sessionIDPlacement": "cookie",
+            "sessionKey": "stream_auth",
+            "sessionPlacement": "cookie",
+            "uplinkChunkSize": 0,
+            "uplinkDataPlacement": "body",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingBytes": "96-1040",
+            "xPaddingHeader": "X-Media-Token",
+            "xPaddingKey": "_t",
+            "xPaddingMethod": "tokenish",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "queryInHeader",
+            "xmux": {
+              "cMaxLifetimeMs": 0,
+              "cMaxReuseTimes": "24-64",
+              "hMaxRequestTimes": "160-320",
+              "hMaxReusableSecs": "600-1200",
+              "maxConcurrency": "4-8",
+              "maxConnections": 0
+            }
+          },
+          "host": "cdnapiv2.md-streem.net",
+          "mode": "packet-up",
+          "path": "/api/v67/uptodown/"
+        }
+      },
+      "tag": "🇪🇺 Обход глушилок 3"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.72.103.3",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "cdnaapiv3.mediaeze.com"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "scMaxEachPostBytes": 100000,
+            "scMinPostsIntervalMs": 70,
+            "seqKey": "part_index",
+            "seqPlacement": "cookie",
+            "sessionIDKey": "stream_auth",
+            "sessionIDPlacement": "cookie",
+            "sessionKey": "stream_auth",
+            "sessionPlacement": "cookie",
+            "uplinkChunkSize": 0,
+            "uplinkDataPlacement": "body",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingBytes": "96-1040",
+            "xPaddingHeader": "X-Media-Token",
+            "xPaddingKey": "_t",
+            "xPaddingMethod": "tokenish",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "queryInHeader",
+            "xmux": {
+              "cMaxLifetimeMs": 0,
+              "cMaxReuseTimes": "24-64",
+              "hMaxRequestTimes": "160-320",
+              "hMaxReusableSecs": "600-1200",
+              "maxConcurrency": "4-8",
+              "maxConnections": 0
+            }
+          },
+          "host": "cdnaapiv3.mediaeze.com",
+          "mode": "packet-up",
+          "path": "/api/v68/uptodown/"
+        }
+      },
+      "tag": "🇪🇺 Обход глушилок 4"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.72.103.3",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "cdnapi.streamru8.net"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "scMaxEachPostBytes": 100000,
+            "scMinPostsIntervalMs": 70,
+            "seqKey": "part_index",
+            "seqPlacement": "cookie",
+            "sessionIDKey": "stream_auth",
+            "sessionIDPlacement": "cookie",
+            "sessionKey": "stream_auth",
+            "sessionPlacement": "cookie",
+            "uplinkChunkSize": 0,
+            "uplinkDataPlacement": "body",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingBytes": "96-1040",
+            "xPaddingHeader": "X-Media-Token",
+            "xPaddingKey": "_t",
+            "xPaddingMethod": "tokenish",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "queryInHeader",
+            "xmux": {
+              "cMaxLifetimeMs": 0,
+              "cMaxReuseTimes": "24-64",
+              "hMaxRequestTimes": "160-320",
+              "hMaxReusableSecs": "600-1200",
+              "maxConcurrency": "4-8",
+              "maxConnections": 0
+            }
+          },
+          "host": "cdnapi.streamru8.net",
+          "mode": "packet-up",
+          "path": "/api/v74/uptodown"
+        }
+      },
+      "tag": "🇪🇺 Обход глушилок 5"
+    },
+    {
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "188.72.103.3",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "id": "f73681a4-1654-446f-a7eb-bda3bfd9e521"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": false,
+          "fingerprint": "chrome",
+          "serverName": "cdnapiv3.streamru4.net"
+        },
+        "xhttpSettings": {
+          "extra": {
+            "scMaxEachPostBytes": 100000,
+            "scMinPostsIntervalMs": 70,
+            "seqKey": "part_index",
+            "seqPlacement": "cookie",
+            "sessionIDKey": "stream_auth",
+            "sessionIDPlacement": "cookie",
+            "sessionKey": "stream_auth",
+            "sessionPlacement": "cookie",
+            "uplinkChunkSize": 0,
+            "uplinkDataPlacement": "body",
+            "uplinkHTTPMethod": "GET",
+            "xPaddingBytes": "96-1040",
+            "xPaddingHeader": "X-Media-Token",
+            "xPaddingKey": "_t",
+            "xPaddingMethod": "tokenish",
+            "xPaddingObfsMode": true,
+            "xPaddingPlacement": "queryInHeader",
+            "xmux": {
+              "cMaxLifetimeMs": 0,
+              "cMaxReuseTimes": "24-64",
+              "hMaxRequestTimes": "160-320",
+              "hMaxReusableSecs": "600-1200",
+              "maxConcurrency": "4-8",
+              "maxConnections": 0
+            }
+          },
+          "host": "cdnapiv3.streamru4.net",
+          "mode": "packet-up",
+          "path": "/api/v71/uptodown"
+        }
+      },
+      "tag": "🇪🇺 Обход глушилок 6"
+    },
+    {
+      "tag": "🇵🇱 Теллеграмм",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "quorvia.pulsio.cfd",
+            "port": 443,
+            "users": [
+              {
+                "id": "d6a3a12d-1497-482e-a445-08aaaef9f0c8",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "quorvia.pulsio.cfd",
+          "publicKey": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
+          "shortId": "9698d67e63bc8ee0",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 Теллеграмм",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "quorvia.pulsio.cfd",
+            "port": 443,
+            "users": [
+              {
+                "id": "d6a3a12d-1497-482e-a445-08aaaef9f0c8",
+                "encryption": "none",
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "tcpSettings": {},
+        "security": "reality",
+        "realitySettings": {
+          "serverName": "quorvia.pulsio.cfd",
+          "publicKey": "OTuJX9K_E2nHhg0mXT2uFMNIO7746G6c5rlT6OscQGk",
+          "shortId": "9698d67e63bc8ee0",
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "✸ Турция ⚡ ✸",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "144.31.128.105",
+            "port": 2083,
+            "users": [
+              {
+                "id": "57b39ea0-3727-4101-9a69-ac2a805304fb",
+                "encryption": "none",
+                "level": 8,
+                "flow": "xtls-rprx-vision"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "reality",
+        "realitySettings": {
+          "show": false,
+          "fingerprint": "firefox",
+          "serverName": "www.booking.com",
+          "shortId": "b4",
+          "spiderX": "/",
+          "password": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
+          "publicKey": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA"
+        }
+      }
+    },
+    {
+      "protocol": "freedom",
+      "tag": "DIRECT"
+    },
+    {
+      "protocol": "blackhole",
+      "tag": "BLOCK",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
+    }
+  ],
+  "observatory": {
+    "subjectSelector": [
+      "🇬🇧 месенджеры",
+      "🇫🇲 📶 Авто",
+      "🇪🇺 Обход глушилок 1",
+      "🇪🇺 Обход глушилок 2",
+      "🇪🇺 Обход глушилок 3",
+      "🇪🇺 Обход глушилок 4",
+      "🇪🇺 Обход глушилок 5",
+      "🇪🇺 Обход глушилок 6",
+      "🇻🇳📡 LTE Обход | Глушилки",
+      "🇪🇺 Обход глушилок 7",
+      "🇪🇺 Обход глушилок 8"
+    ],
+    "probeUrl": "http://www.gstatic.com/generate_204",
+    "probeInterval": "1m",
+    "enableConcurrency": true
+  },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "type": "field",
+        "protocol": [
+          "bittorrent"
+        ],
+        "outboundTag": "BLOCK"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "regexp:(^|\\.)ya\\.ru$",
+          "regexp:(^|\\.)yandex\\.(ru|net)$",
+          "regexp:(^|\\.)dzen\\.ru$",
+          "regexp:(^|\\.)mail\\.ru$",
+          "regexp:(^|\\.)vk\\.com$",
+          "regexp:(^|\\.)vkvideo\\.ru$",
+          "regexp:(^|\\.)ok\\.ru$",
+          "regexp:(^|\\.)rutube\\.ru$",
+          "regexp:(^|\\.)rutube\\.com$",
+          "regexp:(^|\\.)rambler\\.ru$",
+          "regexp:(^|\\.)lenta\\.ru$",
+          "regexp:(^|\\.)ria\\.ru$",
+          "regexp:(^|\\.)tass\\.ru$",
+          "regexp:(^|\\.)gazeta\\.ru$",
+          "regexp:(^|\\.)kommersant\\.ru$",
+          "regexp:(^|\\.)rg\\.ru$",
+          "regexp:(^|\\.)iz\\.ru$",
+          "regexp:(^|\\.)cnews\\.ru$",
+          "regexp:(^|\\.)habr\\.com$",
+          "regexp:(^|\\.)habr\\.ru$",
+          "regexp:(^|\\.)gosuslugi\\.ru$",
+          "regexp:(^|\\.)nalog\\.gov\\.ru$",
+          "regexp:(^|\\.)mos\\.ru$",
+          "regexp:(^|\\.)sber\\.ru$",
+          "regexp:(^|\\.)sberbank\\.ru$",
+          "regexp:(^|\\.)tbank\\.ru$",
+          "regexp:(^|\\.)tinkoff\\.ru$",
+          "regexp:(^|\\.)alfabank\\.ru$",
+          "regexp:(^|\\.)vtb\\.ru$",
+          "regexp:(^|\\.)ozon\\.ru$",
+          "regexp:(^|\\.)wildberries\\.ru$",
+          "regexp:(^|\\.)wb\\.ru$",
+          "regexp:(^|\\.)avito\\.ru$",
+          "regexp:(^|\\.)2gis\\.ru$",
+          "regexp:(^|\\.)cdek\\.ru$",
+          "regexp:(^|\\.)pochta\\.ru$",
+          "regexp:(^|\\.)consultant\\.ru$",
+          "regexp:(^|\\.)garant\\.ru$",
+          "regexp:(^|\\.)kino\\.ru$",
+          "regexp:(^|\\.)kinopoisk\\.ru$",
+          "regexp:(^|\\.)music\\.yandex\\.(ru|net)$",
+          "regexp:(^|\\.)disk\\.yandex\\.(ru|net)$",
+          "regexp:(^|\\.).*\\.ru$",
+          "regexp:(^|\\.).*\\.рф$",
+          "regexp:(^|\\.).*\\.su$"
+        ],
+        "outboundTag": "DIRECT"
+      },
+      {
+        "type": "field",
+        "ip": [
+          "geoip:private"
+        ],
+        "outboundTag": "DIRECT"
+      },
+      {
+        "type": "field",
+        "network": "tcp,udp",
+        "balancerTag": "🚀 AUTO | Авто-подбор"
+      }
+    ],
+    "balancers": [
+      {
+        "tag": "🚀 AUTO | Авто-подбор",
+        "selector": [
+          "🇬🇧 месенджеры",
+          "🇫🇲 📶 Авто",
+          "🇪🇺 Обход глушилок 1",
+          "🇪🇺 Обход глушилок 2",
+          "🇪🇺 Обход глушилок 3",
+          "🇪🇺 Обход глушилок 4",
+          "🇪🇺 Обход глушилок 5",
+          "🇪🇺 Обход глушилок 6",
+          "🇻🇳📡 LTE Обход | Глушилки",
+          "🇪🇺 Обход глушилок 7",
+          "🇪🇺 Обход глушилок 8"
+        ],
+        "fallbackTag": "🇬🇧 месенджеры",
+        "strategy": {
+          "type": "leastPing"
+        }
+      }
+    ]
+  },
+  "dns": {
+    "servers": [
+      "1.1.1.1",
+      "8.8.8.8"
+    ]
+  }
+}

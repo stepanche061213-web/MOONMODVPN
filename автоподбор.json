@@ -432,127 +432,6 @@
       "tag": "🇪🇺 Обход глушилок 6"
     },
     {
-      "tag": "🇪🇺 Авто | Обход LTE 11",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "176.109.88.217",
-            "port": 9443,
-            "users": [
-              {
-                "id": "3b14e541-d0d2-4833-a98e-05d7aa0d14b6",
-                "encryption": "none",
-                "level": 8,
-                "flow": "xtls-rprx-vision"
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "tcp",
-        "security": "reality",
-        "realitySettings": {
-          "serverName": "www.cloudflare.com",
-          "fingerprint": "chrome",
-          "shortId": "c303fd64bf463450",
-          "publicKey": "nlSTIZeziCL_gR8HN1UF4F_Gbcrqr4Z9pr_sM6dGbig",
-          "spiderX": "/"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇺 Авто | Обход LTE 13",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "web-interface.whit3.net",
-            "port": 443,
-            "users": [
-              {
-                "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
-                "encryption": "none",
-                "level": 8,
-                "flow": ""
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "web-interface.whit3.net",
-          "fingerprint": "edge",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        },
-        "xhttpSettings": {
-          "path": "/api/v7/sync/vids/",
-          "mode": "packet-up",
-          "extra": {
-            "path": "/api/v7/sync/vids/",
-            "xPaddingKey": "_dc",
-            "xPaddingHeader": "X-Cache",
-            "xPaddingMethod": "tokenish",
-            "uplinkHTTPMethod": "GET",
-            "xPadding0bfsMode": true,
-            "xPaddingPlacement": "queryInHeader"
-          }
-        }
-      }
-    },
-    {
-      "tag": "🇪🇺 Авто | Обход LTE 14",
-      "protocol": "vless",
-      "settings": {
-        "vnext": [
-          {
-            "address": "follow-d.whit3.net",
-            "port": 443,
-            "users": [
-              {
-                "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
-                "encryption": "none",
-                "level": 8,
-                "flow": ""
-              }
-            ]
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "xhttp",
-        "security": "tls",
-        "tlsSettings": {
-          "serverName": "follow-d.whit3.net",
-          "fingerprint": "edge",
-          "alpn": [
-            "h2",
-            "http/1.1"
-          ]
-        },
-        "xhttpSettings": {
-          "path": "/api/v2/sync/png/",
-          "mode": "packet-up",
-          "extra": {
-            "path": "/api/v2/sync/png/",
-            "xPaddingKey": "_dc",
-            "xPaddingHeader": "X-Cache",
-            "xPaddingMethod": "tokenish",
-            "uplinkHTTPMethod": "GET",
-            "xPadding0bfsMode": true,
-            "xPaddingPlacement": "queryInHeader"
-          }
-        }
-      }
-    },
-    {
       "tag": "🇳🇱 ⚡Нидерланды: Белый список",
       "protocol": "vless",
       "settings": {
@@ -658,7 +537,97 @@
       }
     },
     {
-      "tag": "🇪🇺 Авто | Обход LTE 9",
+      "tag": "🇪🇺 Обход глушилок 7",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "web-interface.whit3.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                "encryption": "none",
+                "level": 8,
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "web-interface.whit3.net",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "xhttpSettings": {
+          "path": "/api/v7/sync/vids/",
+          "mode": "packet-up",
+          "extra": {
+            "path": "/api/v7/sync/vids/",
+            "xPaddingKey": "_dc",
+            "xPaddingHeader": "X-Cache",
+            "xPaddingMethod": "tokenish",
+            "uplinkHTTPMethod": "GET",
+            "xPadding0bfsMode": true,
+            "xPaddingPlacement": "queryInHeader"
+          }
+        }
+      }
+    },
+    {
+      "tag": "🇪🇺 Обход глушилок 8",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "follow-d.whit3.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                "encryption": "none",
+                "level": 8,
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "follow-d.whit3.net",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "xhttpSettings": {
+          "path": "/api/v2/sync/png/",
+          "mode": "packet-up",
+          "extra": {
+            "path": "/api/v2/sync/png/",
+            "xPaddingKey": "_dc",
+            "xPaddingHeader": "X-Cache",
+            "xPaddingMethod": "tokenish",
+            "uplinkHTTPMethod": "GET",
+            "xPadding0bfsMode": true,
+            "xPaddingPlacement": "queryInHeader"
+          }
+        }
+      }
+    },
+    {
+      "tag": "🇪🇺 Обход глушилок 9",
       "protocol": "vless",
       "settings": {
         "vnext": [
@@ -703,6 +672,51 @@
       }
     },
     {
+      "tag": "🇪🇺 Обход глушилок 10",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "anythingcdn.whit3.net",
+            "port": 443,
+            "users": [
+              {
+                "id": "32bf865b-e98c-494d-bcb6-23c3cde2429c",
+                "encryption": "none",
+                "level": 8,
+                "flow": ""
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "anythingcdn.whit3.net",
+          "fingerprint": "edge",
+          "alpn": [
+            "h2",
+            "http/1.1"
+          ]
+        },
+        "xhttpSettings": {
+          "path": "/api/v5/sync/vids/",
+          "mode": "packet-up",
+          "extra": {
+            "path": "/api/v5/sync/vids/",
+            "xPaddingKey": "_dc",
+            "xPaddingHeader": "X-Cache",
+            "xPaddingMethod": "tokenish",
+            "uplinkHTTPMethod": "GET",
+            "xPadding0bfsMode": true,
+            "xPaddingPlacement": "queryInHeader"
+          }
+        }
+      }
+    },
+    {
       "protocol": "freedom",
       "tag": "DIRECT"
     },
@@ -725,13 +739,13 @@
       "🇪🇺 Обход глушилок 4",
       "🇪🇺 Обход глушилок 5",
       "🇪🇺 Обход глушилок 6",
-      "🇪🇺 Авто | Обход LTE 11",
-      "🇪🇺 Авто | Обход LTE 13",
-      "🇪🇺 Авто | Обход LTE 14",
       "🇳🇱 ⚡Нидерланды: Белый список",
       "🇨🇭 ⚡Швейцария: Белый список",
       "🇩🇪 ⚡Германия: Белый список",
-      "🇪🇺 Авто | Обход LTE 9"
+      "🇪🇺 Обход глушилок 7",
+      "🇪🇺 Обход глушилок 8",
+      "🇪🇺 Обход глушилок 9",
+      "🇪🇺 Обход глушилок 10"
     ],
     "probeUrl": "http://www.gstatic.com/generate_204",
     "probeInterval": "1m",
@@ -822,13 +836,13 @@
           "🇪🇺 Обход глушилок 4",
           "🇪🇺 Обход глушилок 5",
           "🇪🇺 Обход глушилок 6",
-          "🇪🇺 Авто | Обход LTE 11",
-          "🇪🇺 Авто | Обход LTE 13",
-          "🇪🇺 Авто | Обход LTE 14",
           "🇳🇱 ⚡Нидерланды: Белый список",
           "🇨🇭 ⚡Швейцария: Белый список",
           "🇩🇪 ⚡Германия: Белый список",
-          "🇪🇺 Авто | Обход LTE 9"
+          "🇪🇺 Обход глушилок 7",
+          "🇪🇺 Обход глушилок 8",
+          "🇪🇺 Обход глушилок 9",
+          "🇪🇺 Обход глушилок 10"
         ],
         "fallbackTag": "🇬🇧 месенджеры",
         "strategy": {
